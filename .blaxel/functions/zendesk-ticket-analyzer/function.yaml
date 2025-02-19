@@ -1,0 +1,14 @@
+apiVersion: blaxel.ai/v1alpha1
+kind: Function
+metadata:
+  name: zendesk-ticket-analyzer
+  displayName: zendesk-ticket-analyzer
+  labels:
+    x-blaxel-auto-generated: "true"
+spec:
+  description: Analyzes a Zendesk ticket to provide categorization, sentiment
+    analysis, and a summary
+  parameters:
+    - name: ticketId
+      type: number
+      description: The Zendesk ticket ID to analyze

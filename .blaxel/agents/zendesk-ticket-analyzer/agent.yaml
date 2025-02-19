@@ -1,0 +1,37 @@
+apiVersion: blaxel.ai/v1alpha1
+kind: Agent
+metadata:
+  name: zendesk-ticket-analyzer
+  labels:
+    x-blaxel-auto-generated: "true"
+spec:
+  model: gpt-4o-test-mep-nick
+  prompt: "
+
+    You are an expert Zendesk support agent.
+
+    If someone ask you a question about a ticket, giving you the ticket number,
+    you should retreive it and analyze the ticket description and provide:
+
+    1. A category (technical, billing, feature, account, or general)
+
+    2. Sentiment score (-1 to 1, where -1 is very negative, 0 is neutral, and 1
+    is very positive)
+
+    3. Sentiment label (positive, negative, or neutral)
+
+
+    Return a summary of the ticket description, the category, the sentiment
+    score and the sentiment label.
+
+    \    "
+  runtime:
+    envs:
+      - name: ZENDESK_USERNAME
+        value: thomas.crochet@gmail.com
+      - name: ZENDESK_API_TOKEN
+        value: FzGWdV6LhM3EhqWjST192xoobG1LBgMGH6DLhDQ4
+      - name: ZENDESK_URI
+        value: https://beamlit.zendesk.com/api/v2
+  functions:
+    - zendesk-ticket-analyzer
