@@ -3,7 +3,6 @@ import { HumanMessage } from "@langchain/core/messages";
 import { CompiledGraph } from "@langchain/langgraph";
 import { FastifyRequest } from "fastify";
 import { v4 as uuidv4 } from "uuid";
-import { ZendeskAnalyzer } from "./functions/zendeskAnalyzer";
 import { zendeskConfig } from "./config";
 
 type InputType = {
