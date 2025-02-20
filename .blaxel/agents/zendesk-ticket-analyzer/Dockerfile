@@ -3,7 +3,7 @@ FROM node:20-slim
 
 RUN apt update && apt install -y curl build-essential
 
-RUN curl -fsSL https://raw.githubusercontent.com/cploujoux/toolkit/main/install.sh | BINDIR=/bin sh
+RUN curl -fsSL https://raw.githubusercontent.com/beamlit/toolkit/main/install.sh | BINDIR=/bin sh
 WORKDIR /blaxel
 
 # Install dependencies
