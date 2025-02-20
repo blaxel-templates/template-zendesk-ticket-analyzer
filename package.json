@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@blaxel/sdk": "^0.0.64-alpha.90",
+    "@google-cloud/language": "^5.0.0",
     "@langchain/anthropic": "^0.3.12",
     "@langchain/cohere": "^0.3.2",
     "@langchain/deepseek": "^0.0.1",
@@ -20,9 +21,9 @@
     "@langchain/mistralai": "^0.2.0",
     "@langchain/openai": "^0.3.17",
     "@langchain/xai": "^0.0.1",
-    "node-zendesk": "^2.1.0",
-    "@google-cloud/language": "^5.0.0",
-    "dotenv": "^16.0.3"
+    "@types/node-zendesk": "^2.0.15",
+    "dotenv": "^16.0.3",
+    "node-zendesk": "^2.1.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
