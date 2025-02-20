@@ -25,14 +25,6 @@ spec:
     score and the sentiment label.
 
     \    "
-  runtime:
-    envs:
-      - name: ZENDESK_USERNAME
-        value: thomas.crochet@gmail.com
-      - name: ZENDESK_API_TOKEN
-        value: FzGWdV6LhM3EhqWjST192xoobG1LBgMGH6DLhDQ4
-      - name: ZENDESK_URI
-        value: https://beamlit.zendesk.com/api/v2
   repository: null
   functions:
     - zendesk-ticket-analyzer

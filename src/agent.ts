@@ -50,22 +50,6 @@ If someone ask you a question about a ticket, giving you the ticket number, you 
 
 Return a summary of the ticket description, the category, the sentiment score and the sentiment label.
     `,
-      runtime: {
-        envs: [
-          {
-            name: "ZENDESK_USERNAME",
-            value: zendeskConfig.username,
-          },
-          {
-            name: "ZENDESK_API_TOKEN",
-            value: zendeskConfig.token,
-          },
-          {
-            name: "ZENDESK_URI",
-            value: zendeskConfig.remoteUri,
-          },
-        ],
-      },
     },
   },
 });

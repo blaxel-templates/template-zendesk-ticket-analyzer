@@ -62,4 +62,22 @@ export default wrapFunction(analyzeTicket, {
       description: "The Zendesk ticket ID to analyze",
     },
   ],
+  function: {
+    runtime: {
+      envs: [
+        {
+          name: "ZENDESK_USERNAME",
+          value: zendeskConfig.username,
+        },
+        {
+          name: "ZENDESK_API_TOKEN",
+          value: zendeskConfig.token,
+        },
+        {
+          name: "ZENDESK_URI",
+          value: zendeskConfig.remoteUri,
+        },
+      ],
+    },
+  },
 });
