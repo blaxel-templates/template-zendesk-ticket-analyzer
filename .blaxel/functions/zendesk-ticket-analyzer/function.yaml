@@ -12,3 +12,11 @@ spec:
     - name: ticketId
       type: number
       description: The Zendesk ticket ID to analyze
+  runtime:
+    envs:
+      - name: ZENDESK_USERNAME
+        value: your_email@gmail.com
+      - name: ZENDESK_API_TOKEN
+        value: your_api_token
+      - name: ZENDESK_URI
+        value: https://your_zendesk_subdomain.zendesk.com/api/v2

@@ -63,21 +63,23 @@ export default wrapFunction(analyzeTicket, {
     },
   ],
   function: {
-    runtime: {
-      envs: [
-        {
-          name: "ZENDESK_USERNAME",
-          value: zendeskConfig.username,
-        },
-        {
-          name: "ZENDESK_API_TOKEN",
-          value: zendeskConfig.token,
-        },
-        {
-          name: "ZENDESK_URI",
-          value: zendeskConfig.remoteUri,
-        },
-      ],
+    spec: {
+      runtime: {
+        envs: [
+          {
+            name: "ZENDESK_USERNAME",
+            value: zendeskConfig.username,
+          },
+          {
+            name: "ZENDESK_API_TOKEN",
+            value: zendeskConfig.token,
+          },
+          {
+            name: "ZENDESK_URI",
+            value: zendeskConfig.remoteUri,
+          },
+        ],
+      },
     },
   },
 });
