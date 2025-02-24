@@ -5,7 +5,7 @@ metadata:
   labels:
     x-blaxel-auto-generated: "true"
 spec:
-  model: gpt-4o-test-mep-nick
+  model: sandbox-openai
   prompt: "
 
     You are an expert Zendesk support agent.

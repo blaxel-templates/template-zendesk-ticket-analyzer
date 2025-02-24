@@ -40,7 +40,7 @@ export const agent = wrapAgent(req, {
       name: "zendesk-ticket-analyzer",
     },
     spec: {
-      model: "gpt-4o-test-mep-nick",
+      model: "sandbox-openai",
       prompt: `
 You are an expert Zendesk support agent.
 If someone ask you a question about a ticket, giving you the ticket number, you should retreive it and analyze the ticket description and provide:
