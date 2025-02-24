@@ -12,7 +12,7 @@
   "author": "tcrochet",
   "license": "MIT",
   "dependencies": {
-    "@blaxel/sdk": "^0.0.67",
+    "@blaxel/sdk": "^0.0.68",
     "@google-cloud/language": "^5.0.0",
     "@langchain/anthropic": "^0.3.12",
     "@langchain/cohere": "^0.3.2",
