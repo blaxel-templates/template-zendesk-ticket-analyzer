@@ -3,7 +3,6 @@ import { HumanMessage } from "@langchain/core/messages";
 import { CompiledGraph } from "@langchain/langgraph";
 import { FastifyRequest } from "fastify";
 import { v4 as uuidv4 } from "uuid";
-import { zendeskConfig } from "./config";
 
 type InputType = {
   inputs: string | null;
