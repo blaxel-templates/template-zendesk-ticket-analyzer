@@ -1,9 +1,7 @@
 import * as Zendesk from "node-zendesk";
 // import { ChatOpenAI } from "@langchain/openai";
-import { getChatModel } from "@blaxel/sdk";
 import { wrapFunction } from "@blaxel/sdk";
 import { zendeskConfig } from "../config";
-import { z } from "zod";
 
 interface TicketAnalysis {
   description: string;
@@ -68,15 +66,15 @@ export default wrapFunction(analyzeTicket, {
         envs: [
           {
             name: "ZENDESK_USERNAME",
-            value: zendeskConfig.username,
+            value: "$ZENDESK_USERNAME",
           },
           {
             name: "ZENDESK_API_TOKEN",
-            value: zendeskConfig.token,
+            value: "$secrets.ZENDESK_API_TOKEN",
           },
           {
             name: "ZENDESK_URI",
-            value: zendeskConfig.remoteUri,
+            value: "$ZENDESK_URI",
           },
         ],
       },
