@@ -53,13 +53,16 @@ export default wrapFunction(analyzeTicket, {
   name: "zendesk-ticket-analyzer",
   description:
     "Analyzes a Zendesk ticket to provide categorization, sentiment analysis, and a summary",
-  parameters: [
-    {
-      name: "ticketId",
-      type: "number",
-      description: "The Zendesk ticket ID to analyze",
+  schema: {
+    type: "object",
+    properties: {
+      ticketId: {
+        type: "number",
+        description: "The Zendesk ticket ID to analyze",
+      },
     },
-  ],
+    required: ["ticketId"],
+  },
   function: {
     spec: {
       runtime: {
