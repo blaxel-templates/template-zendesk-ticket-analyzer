@@ -16,6 +16,7 @@
     "@google-cloud/language": "^5.0.0",
     "@langchain/anthropic": "^0.3.12",
     "@langchain/cohere": "^0.3.2",
+    "@langchain/core": "^0.3.42",
     "@langchain/deepseek": "^0.0.1",
     "@langchain/langgraph": "^0.2.41",
     "@langchain/mistralai": "^0.2.0",
@@ -23,7 +24,9 @@
     "@langchain/xai": "^0.0.1",
     "@types/node-zendesk": "^2.0.15",
     "dotenv": "^16.0.3",
-    "node-zendesk": "^2.1.0"
+    "fastify": "^5.2.1",
+    "node-zendesk": "^2.1.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
