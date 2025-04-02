@@ -1,46 +1,21 @@
-import { getDefaultThread, wrapAgent } from "@blaxel/sdk";
-import { HumanMessage } from "@langchain/core/messages";
-import { CompiledGraph } from "@langchain/langgraph";
-import { FastifyRequest } from "fastify";
-import { v4 as uuidv4 } from "uuid";
+import { blModel, blTools, logger } from "@blaxel/sdk";
+import { Agent } from "@mastra/core/agent";
+import { prompt } from "./prompt";
+import { analyzeTicketTool } from "./tools/zendesk-ticket-analyzer";
 
-type InputType = {
-  inputs: string | null;
-  input: string | null;
-  ticketId?: string | number;
-};
+interface Stream {
+  write: (data: string) => void;
+  end: () => void;
+}
 
-type AgentType = {
-  agent: CompiledGraph<any, any, any, any, any, any>;
-};
-
-const req = async (request: FastifyRequest, args: AgentType) => {
-  const { agent } = args;
-  const body = (await request.body) as InputType;
-  const thread_id = getDefaultThread(request) || uuidv4();
-  const input = body.inputs || body.input || "";
-  const responses: any[] = [];
-
-  const stream = await agent.stream(
-    { messages: [new HumanMessage(input)] },
-    { configurable: { thread_id } }
-  );
-
-  for await (const chunk of stream) {
-    responses.push(chunk);
-  }
-  const content = responses[responses.length - 1];
-  return content.agent.messages[content.agent.messages.length - 1].content;
-};
-
-export const agent = wrapAgent(req, {
-  agent: {
-    metadata: {
-      name: "zendesk-ticket-analyzer",
-    },
-    spec: {
-      model: "sandbox-openai",
-      prompt: `
+export default async function agent(
+  input: string,
+  stream: Stream
+): Promise<void> {
+  const agent = new Agent({
+    name: "zendesk-ticket-analyzer",
+    model: await blModel("sandbox-openai").ToMastra(),
+    instructions: `
 You are an expert Zendesk support agent.
 If someone ask you a question about a ticket, giving you the ticket number, you should retreive it and analyze the ticket description and provide:
 1. A category (technical, billing, feature, account, or general)
@@ -49,6 +24,20 @@ If someone ask you a question about a ticket, giving you the ticket number, you 
 
 Return a summary of the ticket description, the category, the sentiment score and the sentiment label.
     `,
-    },
-  },
-});
+    tools: [analyzeTicketTool],
+  });
+
+  const response = await agent.stream([{ role: "user", content: input }]);
+
+  let fullText = "";
+  for await (const delta of response.textStream) {
+    fullText += delta;
+    stream.write(delta);
+  }
+  stream.end();
+
+  return {
+    object: response.object,
+    text: fullText,
+  };
+}

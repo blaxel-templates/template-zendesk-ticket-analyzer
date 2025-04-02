@@ -106,14 +106,12 @@ This command uses your code and the configuration files under the `.blaxel` dire
 ## Project Structure
 
 - **src/**
+  - `index.ts` - The main entry point of the application.
   - `agent.ts` - Configures the chat agent, streams HTTP
     responses, and integrates conversational context.
-  - `functions` - Directory to add your functions/tools
-    available to your agent. Documentation on how to develop your
-    own functions
+  - `tools` - Directory to add your tools available to your agent.
   - `config.ts` - Contains configuration and environment variable setup.
 - **.blaxel/** - Contains configuration files for Blaxel functions and models.
-- **index.ts** - The main entry point of the application.
 - **tsconfig.json** - TypeScript compiler configuration.
 - **package.json** - Lists dependencies and defines various project scripts.
 

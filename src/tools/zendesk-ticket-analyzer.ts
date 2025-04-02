@@ -1,6 +1,6 @@
 import * as Zendesk from "node-zendesk";
-// import { ChatOpenAI } from "@langchain/openai";
-import { wrapFunction } from "@blaxel/sdk";
+import { createTool } from "@mastra/core/tools";
+import { z } from "zod";
 import { zendeskConfig } from "../config";
 
 interface TicketAnalysis {
@@ -49,38 +49,10 @@ const analyzeTicket = async ({
   }
 };
 
-export default wrapFunction(analyzeTicket, {
-  name: "zendesk-ticket-analyzer",
+export const analyzeTicketTool = createTool({
+  name: "analyze_ticket",
   description:
     "Analyzes a Zendesk ticket to provide categorization, sentiment analysis, and a summary",
-  schema: {
-    type: "object",
-    properties: {
-      ticketId: {
-        type: "number",
-        description: "The Zendesk ticket ID to analyze",
-      },
-    },
-    required: ["ticketId"],
-  },
-  function: {
-    spec: {
-      runtime: {
-        envs: [
-          {
-            name: "ZENDESK_USERNAME",
-            value: "$ZENDESK_USERNAME",
-          },
-          {
-            name: "ZENDESK_API_TOKEN",
-            value: "$secrets.ZENDESK_API_TOKEN",
-          },
-          {
-            name: "ZENDESK_URI",
-            value: "$ZENDESK_URI",
-          },
-        ],
-      },
-    },
-  },
+  parameters: z.object({ ticketId: z.number() }),
+  execute: analyzeTicket,
 });
