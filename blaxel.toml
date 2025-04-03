@@ -1,5 +1,3 @@
-name = "zendesk-ticket-analyzer"
-workspace = ""
 type = "agent"
 
 functions = ["all"]
