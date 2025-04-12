@@ -1,4 +1,4 @@
-import { logger } from "@blaxel/sdk";
+import { env, logger } from "@blaxel/sdk";
 import cors from "@fastify/cors";
 import Fastify from "fastify";
 import agent from "./agent";
@@ -29,8 +29,8 @@ async function main() {
       return reply.status(500).send(error.stack);
     }
   });
-  const port = parseInt(process.env.BL_SERVER_PORT || "80");
-  const host = process.env.BL_SERVER_HOST || "0.0.0.0";
+  const port = parseInt(env.BL_SERVER_PORT || "80");
+  const host = env.BL_SERVER_HOST || "0.0.0.0";
   try {
     await app.listen({ port, host });
     logger.info(`Server is running on port ${host}:${port}`);
