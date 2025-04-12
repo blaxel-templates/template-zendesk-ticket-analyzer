@@ -1,5 +1,5 @@
+import { tool } from "ai";
 import * as Zendesk from "node-zendesk";
-import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
 import { zendeskConfig } from "../config";
 
@@ -15,7 +15,7 @@ const client = Zendesk.createClient({
 });
 
 // Get ticket from Zendesk
-const getTicket = async (ticketId: number): Promise<any> => {
+const getTicket = async (ticketId: number): Promise<TicketAnalysis | null> => {
   return new Promise((resolve, reject) => {
     client.tickets.show(ticketId, (err: any, req: any, ticket: any) => {
       if (err) {
@@ -49,8 +49,7 @@ const analyzeTicket = async ({
   }
 };
 
-export const analyzeTicketTool = createTool({
-  name: "analyze_ticket",
+export const analyzeTicketTool = tool({
   description:
     "Analyzes a Zendesk ticket to provide categorization, sentiment analysis, and a summary",
   parameters: z.object({ ticketId: z.number() }),
