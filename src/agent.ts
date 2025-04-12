@@ -1,6 +1,5 @@
-import { blModel, blTools, logger } from "@blaxel/sdk";
+import { blModel } from "@blaxel/sdk";
 import { Agent } from "@mastra/core/agent";
-import { prompt } from "./prompt";
 import { analyzeTicketTool } from "./tools/zendesk-ticket-analyzer";
 
 interface Stream {
@@ -24,7 +23,9 @@ If someone ask you a question about a ticket, giving you the ticket number, you 
 
 Return a summary of the ticket description, the category, the sentiment score and the sentiment label.
     `,
-    tools: [analyzeTicketTool],
+    tools: {
+      analyzeTicketTool,
+    },
   });
 
   const response = await agent.stream([{ role: "user", content: input }]);
@@ -35,9 +36,4 @@ Return a summary of the ticket description, the category, the sentiment score an
     stream.write(delta);
   }
   stream.end();
-
-  return {
-    object: response.object,
-    text: fullText,
-  };
 }

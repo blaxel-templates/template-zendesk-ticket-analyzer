@@ -1,6 +1,6 @@
 import { logger } from "@blaxel/sdk";
-import Fastify from "fastify";
 import cors from "@fastify/cors";
+import Fastify from "fastify";
 import agent from "./agent";
 
 interface RequestBody {

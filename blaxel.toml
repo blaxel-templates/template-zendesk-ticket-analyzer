@@ -4,6 +4,6 @@ functions = ["all"]
 models = ["sandbox-openai"]
 
 [env]
-ZENDESK_USERNAME=your_zendesk_username
-ZENDESK_API_TOKEN=your_zendesk_api_token
-ZENDESK_URI=your_zendesk_uri
+ZENDESK_USERNAME="your_zendesk_username"
+ZENDESK_API_TOKEN="your_zendesk_api_token"
+ZENDESK_URI="your_zendesk_uri"

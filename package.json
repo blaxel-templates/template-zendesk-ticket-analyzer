@@ -13,21 +13,24 @@
   "license": "MIT",
   "dependencies": {
     "@ai-sdk/openai": "^1.2.5",
-    "@blaxel/sdk": "0.1.3",
+    "@blaxel/sdk": "0.1.6",
+    "@fastify/cors": "^11.0.1",
     "@mastra/core": "^0.6.4",
     "@types/node-zendesk": "^2.0.15",
+    "ai": "^4.3.5",
     "dotenv": "^16.0.3",
     "fastify": "^5.2.1",
     "node-zendesk": "^2.1.0",
-    "uuid": "^11.1.0"
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
-    "@types/js-yaml": "^4.0.9",
     "@types/express": "^5.0.1",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.13.11",
+    "mastra": "^0.4.3",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2",
-    "mastra": "^0.4.3"
+    "typescript": "^5.8.2"
   }
 }
