@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@ai-sdk/openai": "^1.2.5",
-    "@blaxel/sdk": "0.1.8",
+    "@blaxel/sdk": "0.1.9",
     "@fastify/cors": "^11.0.1",
     "@mastra/core": "^0.6.4",
     "@types/node-zendesk": "^2.0.15",

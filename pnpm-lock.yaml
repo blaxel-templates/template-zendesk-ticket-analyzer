@@ -12,8 +12,8 @@ importers:
         specifier: ^1.2.5
         version: 1.3.6(zod@3.24.2)
       '@blaxel/sdk':
-        specifier: 0.1.8
-        version: 0.1.8(d93fdf1cf199793db087f1ff6230abde)
+        specifier: 0.1.9
+        version: 0.1.9(d93fdf1cf199793db087f1ff6230abde)
       '@fastify/cors':
         specifier: ^11.0.1
         version: 11.0.1
@@ -365,8 +365,8 @@ packages:
     resolution: {integrity: sha512-Y3IR1cRnOxOCDvMmNiym7XpXQ93iGDDPHx+Zj+NM+rg0fBaShfQLkg+hKPaZCEvg5N/LeCo4+Rj/i3FuJsIQaw==}
     engines: {node: '>=6.9.0'}
 
-  '@blaxel/sdk@0.1.8':
-    resolution: {integrity: sha512-p97JwmRdwGgQMk7cUmk6WtiR6qBJolOIelK12LTLiXnlndHYOEjv6+Ys/24Li3a7WleRKfk+9k/0JZAaOPStUA==}
+  '@blaxel/sdk@0.1.9':
+    resolution: {integrity: sha512-U4AQCXHXNf4tQhuVq+SUj9WSk1GPcEDdamrRP97yf/azNeuHMZucrUPL6pbsESmllOpjZi5U1r6FXQvS/eHu6A==}
     engines: {node: '>=18'}
     peerDependencies:
       '@ai-sdk/anthropic': ^1.2.9
@@ -4559,7 +4559,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@blaxel/sdk@0.1.8(d93fdf1cf199793db087f1ff6230abde)':
+  '@blaxel/sdk@0.1.9(d93fdf1cf199793db087f1ff6230abde)':
     dependencies:
       '@hey-api/client-fetch': 0.5.7
       '@modelcontextprotocol/sdk': 1.9.0
