@@ -13,9 +13,10 @@
   "license": "MIT",
   "dependencies": {
     "@ai-sdk/openai": "^1.2.5",
-    "@blaxel/sdk": "0.1.9",
+    "@blaxel/sdk": "0.1.11",
     "@fastify/cors": "^11.0.1",
     "@mastra/core": "^0.6.4",
+    "@opentelemetry/instrumentation-fastify": "^0.45.0",
     "@types/node-zendesk": "^2.0.15",
     "ai": "^4.3.5",
     "dotenv": "^16.0.3",
