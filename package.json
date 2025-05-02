@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@ai-sdk/openai": "^1.2.5",
-    "@blaxel/sdk": "0.1.11",
+    "@blaxel/sdk": "0.1.15",
     "@fastify/cors": "^11.0.1",
     "@mastra/core": "^0.6.4",
     "@opentelemetry/instrumentation-fastify": "^0.45.0",
