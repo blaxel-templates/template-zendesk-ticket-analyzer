@@ -1,4 +1,4 @@
-import { env } from "@blaxel/sdk";
+import { env } from "@blaxel/core";
 import dotenv from "dotenv";
 dotenv.config();
 

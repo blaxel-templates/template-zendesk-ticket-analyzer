@@ -1,4 +1,4 @@
-import { blModel } from "@blaxel/sdk";
+import { blModel } from "@blaxel/mastra";
 import { Agent } from "@mastra/core/agent";
 import { analyzeTicketTool } from "./tools/zendesk-ticket-analyzer";
 
@@ -13,7 +13,7 @@ export default async function agent(
 ): Promise<void> {
   const agent = new Agent({
     name: "zendesk-ticket-analyzer",
-    model: await blModel("sandbox-openai").ToMastra(),
+    model: await blModel("sandbox-openai"),
     instructions: `
 You are an expert Zendesk support agent.
 If someone ask you a question about a ticket, giving you the ticket number, you should retreive it and analyze the ticket description and provide:
