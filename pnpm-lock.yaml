@@ -12,14 +12,14 @@ importers:
         specifier: ^1.3.21
         version: 1.3.21(zod@3.24.4)
       '@blaxel/core':
-        specifier: 0.2.7
-        version: 0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
+        specifier: 0.2.13
+        version: 0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       '@blaxel/mastra':
-        specifier: 0.2.7
-        version: 0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)
+        specifier: 0.2.13
+        version: 0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)
       '@blaxel/telemetry':
-        specifier: 0.2.7
-        version: 0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)
+        specifier: 0.2.13
+        version: 0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)
       '@fastify/cors':
         specifier: ^11.0.1
         version: 11.0.1
@@ -87,6 +87,12 @@ packages:
     peerDependencies:
       zod: ^3.0.0
 
+  '@ai-sdk/cohere@1.2.10':
+    resolution: {integrity: sha512-OaUwd5xj4bxSO8hdCbX1a5uUlTouU8FcodSuRON6xDSsmjZIvQL4O2G1XzcidxiQVL8JQuA+M0tHZOwGxSL96A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+
   '@ai-sdk/google@1.2.14':
     resolution: {integrity: sha512-r3FSyyWl0KVjUlKn5o+vMl+Nk8Z/mV6xrqW+49g7fMoRVr/wkRxJZtHorrdDGRreCJubZyAk8ziSQSLpgv2H6w==}
     engines: {node: '>=18'}
@@ -113,6 +119,12 @@ packages:
 
   '@ai-sdk/provider-utils@2.2.7':
     resolution: {integrity: sha512-kM0xS3GWg3aMChh9zfeM+80vEZfXzR3JEUBdycZLtbRZ2TRT8xOj3WodGHPb06sUK5yD7pAXC/P7ctsi2fvUGQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.23.8
+
+  '@ai-sdk/provider-utils@2.2.8':
+    resolution: {integrity: sha512-fqhG+4sCVv8x7nFzYnFo19ryhAa3w096Kmc3hWxMQfW/TubPOmt3A6tYZhl4mUfQWWQMsuSkLrtjlWuXBVSGQA==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.23.8
@@ -365,20 +377,20 @@ packages:
     resolution: {integrity: sha512-+EzkxvLNfiUeKMgy/3luqfsCWFRXLb7U6wNQTk60tovuckwB15B191tJWvpp4HjiQWdJkCxO3Wbvc6jlk3Xb2Q==}
     engines: {node: '>=6.9.0'}
 
-  '@blaxel/core@0.2.7':
-    resolution: {integrity: sha512-o29jVPBAVkNam3EjHAr7KqZytG6wriPh6CORyCWQFA7BWCJVwto2MB6wJRVIba9vI1pbj3dC+osgmsd/00xbDg==}
+  '@blaxel/core@0.2.13':
+    resolution: {integrity: sha512-9/vy9rvbgv+HwzXoSHzOsNR+pL/hh9iVPWulWudCt3JfKsc12/EPSJdyquZwp2BK9/Wu0v7YdXhG/KggDssTUg==}
     engines: {node: '>=18'}
 
-  '@blaxel/mastra@0.2.7':
-    resolution: {integrity: sha512-c6VE765hdx0O26xnZF8Ltlfiv18eyk2UMNaABe5ZyLtmP/IT9zjg73EZHjZqIt/4+1xEHyfBw1HXV+PML+smEQ==}
+  '@blaxel/mastra@0.2.13':
+    resolution: {integrity: sha512-QhRmkzuzTPnceoJTmpmHd8qH5z/wmds0EL0D7uV/923acIIJVTnew4h6+6shrF8knSOI2wlL8448ad9TspuhBQ==}
     engines: {node: '>=18'}
 
-  '@blaxel/telemetry@0.2.7':
-    resolution: {integrity: sha512-yDQFO3/rM2bJ7nLI3wZwmtTxd7cTUSpBXk3hsbqRJk6khbBqN+INroaYecsM51pOnIwrMEdAALrm9b8Nz1q09w==}
+  '@blaxel/telemetry@0.2.13':
+    resolution: {integrity: sha512-M5IRv9YnYHOxDJUR2+6WiAEx1ei2UPFK/XpalXjtW6iG1yaDy7tUtufRbdDpIx0As1nWOwniLZpWUE5aJFG6XA==}
     engines: {node: '>=18'}
 
-  '@blaxel/vercel@0.2.7':
-    resolution: {integrity: sha512-vuXNWcIdjFsboU0xYTCdMmTxCkWh6f6vDNoivLqlgmAQD9LTkYVQ2LIHQFFm3ocIJWjIxszXB5anG9rj867VJg==}
+  '@blaxel/vercel@0.2.13':
+    resolution: {integrity: sha512-7meQQypGAs2pmljXolnWTvfjIzDAbUJJXPVx94IVCCByImxcboFhf51WokwHZhWM2muIp1avPqHjNDfxRPYWVg==}
     engines: {node: '>=18'}
 
   '@clack/core@0.3.5':
@@ -2046,10 +2058,6 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  crypto@1.0.1:
-    resolution: {integrity: sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==}
-    deprecated: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
-
   cycle@1.0.3:
     resolution: {integrity: sha512-TVF6svNzeQCOpjCqsy0/CSy8VgObG3wXusJ73xW2GbG5rGx7lC8zxDSURicsXI2UsGdi2L0QNRCi745/wUDvsA==}
     engines: {node: '>=0.4.0'}
@@ -3646,6 +3654,12 @@ snapshots:
       '@ai-sdk/provider-utils': 2.2.7(zod@3.24.4)
       zod: 3.24.4
 
+  '@ai-sdk/cohere@1.2.10(zod@3.24.4)':
+    dependencies:
+      '@ai-sdk/provider': 1.1.3
+      '@ai-sdk/provider-utils': 2.2.8(zod@3.24.4)
+      zod: 3.24.4
+
   '@ai-sdk/google@1.2.14(zod@3.24.4)':
     dependencies:
       '@ai-sdk/provider': 1.1.3
@@ -3671,6 +3685,13 @@ snapshots:
       zod: 3.24.4
 
   '@ai-sdk/provider-utils@2.2.7(zod@3.24.4)':
+    dependencies:
+      '@ai-sdk/provider': 1.1.3
+      nanoid: 3.3.11
+      secure-json-parse: 2.7.0
+      zod: 3.24.4
+
+  '@ai-sdk/provider-utils@2.2.8(zod@3.24.4)':
     dependencies:
       '@ai-sdk/provider': 1.1.3
       nanoid: 3.3.11
@@ -4269,12 +4290,13 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@blaxel/core@0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))':
+  '@blaxel/core@0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))':
     dependencies:
       '@hey-api/client-fetch': 0.10.0(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       '@modelcontextprotocol/sdk': 1.11.0
-      crypto: 1.0.1
+      axios: 1.9.0
       dotenv: 16.5.0
+      form-data: 4.0.2
       jwt-decode: 4.0.0
       toml: 3.0.0
       uuid: 11.1.0
@@ -4284,28 +4306,30 @@ snapshots:
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
       - bufferutil
+      - debug
       - supports-color
       - utf-8-validate
 
-  '@blaxel/mastra@0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)':
+  '@blaxel/mastra@0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)':
     dependencies:
-      '@blaxel/vercel': 0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)
+      '@blaxel/vercel': 0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
       - bufferutil
+      - debug
       - react
       - supports-color
       - utf-8-validate
       - zod
 
-  '@blaxel/telemetry@0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)':
+  '@blaxel/telemetry@0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)':
     dependencies:
       '@ai-sdk/anthropic': 1.2.10(zod@3.24.4)
       '@ai-sdk/cerebras': 0.2.13(zod@3.24.4)
       '@ai-sdk/google': 1.2.14(zod@3.24.4)
       '@ai-sdk/groq': 1.2.8(zod@3.24.4)
       '@ai-sdk/openai': 1.3.21(zod@3.24.4)
-      '@blaxel/core': 0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
+      '@blaxel/core': 0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/api-logs': 0.200.0
       '@opentelemetry/exporter-logs-otlp-http': 0.200.0(@opentelemetry/api@1.9.0)
@@ -4322,23 +4346,26 @@ snapshots:
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
       - bufferutil
+      - debug
       - react
       - supports-color
       - utf-8-validate
       - zod
 
-  '@blaxel/vercel@0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)':
+  '@blaxel/vercel@0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(react@19.1.0)(zod@3.24.4)':
     dependencies:
       '@ai-sdk/anthropic': 1.2.10(zod@3.24.4)
       '@ai-sdk/cerebras': 0.2.13(zod@3.24.4)
+      '@ai-sdk/cohere': 1.2.10(zod@3.24.4)
       '@ai-sdk/google': 1.2.14(zod@3.24.4)
       '@ai-sdk/groq': 1.2.8(zod@3.24.4)
       '@ai-sdk/openai': 1.3.21(zod@3.24.4)
-      '@blaxel/core': 0.2.7(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
+      '@blaxel/core': 0.2.13(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       ai: 4.3.13(react@19.1.0)(zod@3.24.4)
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
       - bufferutil
+      - debug
       - react
       - supports-color
       - utf-8-validate
@@ -6412,8 +6439,6 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  crypto@1.0.1: {}
 
   cycle@1.0.3: {}
 
