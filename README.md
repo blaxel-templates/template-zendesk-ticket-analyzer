@@ -40,7 +40,7 @@ The agent provides a comprehensive analysis of support tickets, helping teams un
 - **Node.js:** v18 or later.
 - **Blaxel CLI:** Ensure you have the Blaxel CLI installed. If not, install it globally:
   ```bash
-  curl -fsSL https://raw.githubusercontent.com/beamlit/toolkit/main/install.sh | BINDIR=$HOME/.local/bin sh
+  curl -fsSL https://raw.githubusercontent.com/blaxel-ai/toolkit/main/install.sh | BINDIR=$HOME/.local/bin sh
   ```
 - **Blaxel login:** Login to Blaxel platform
   ```bash
@@ -52,7 +52,7 @@ The agent provides a comprehensive analysis of support tickets, helping teams un
 - **Clone the repository and install the dependencies**:
 
   ```bash
-  git clone https://github.com/beamlit/template-zendesk-ticket-analyzer.git
+  git clone https://github.com/blaxel-ai/template-zendesk-ticket-analyzer.git
   cd template-zendesk-ticket-analyzer
   npm install
   ```
