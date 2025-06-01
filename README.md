@@ -1,120 +1,137 @@
 # Blaxel Agent - Zendesk Ticket Analyzer
 
+[![CI](https://github.com/blaxel-templates/template-zendesk-ticket-analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/blaxel-templates/template-zendesk-ticket-analyzer/actions)
+[![npm version](https://img.shields.io/npm/v/@blaxel/zendesk-ticket-analyzer?color=crimson)](https://www.npmjs.com/package/@blaxel/zendesk-ticket-analyzer)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 <p align="center">
-  <img src="https://blaxel.ai/logo.png" alt="Blaxel"/>
+  <img src="https://blaxel.ai/logo.png" alt="Blaxel" width="120">
 </p>
 
-This repository implements a Zendesk Ticket Analysis agent built using the [Blaxel SDK](https://blaxel.ai). The agent processes Zendesk support tickets and provides automated analysis including ticket categorization, sentiment analysis, and summary generation. It can analyze tickets based on their ticket numbers and provide insights such as the ticket category (technical, billing, feature, account, or general), sentiment score, and sentiment label.
+**Zendesk Ticket Analyzer** processes tickets via Blaxel SDS-K core. It fetches ticket details, classifies categories, scores sentiment, and generates summaries.
 
-## How it works
+## Table of Contents
 
-The agent processes Zendesk support tickets through a streamlined analysis pipeline:
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+- [Usage](#usage)
+  - [Run Server Locally](#run-server-locally)
+  - [Test Agent](#test-agent)
+- [API Reference](#api-reference)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
 
-1. **Ticket Retrieval**
+## Features
 
-   - Uses the Zendesk API to fetch ticket details using the provided ticket number
-   - Authenticates using configured Zendesk credentials (username, API token, and URI)
+- Retrieve ticket details with authenticated Zendesk API
+- Classify tickets by category (technical, billing, feature, account, general)
+- Score sentiment and label (positive, negative, neutral)
+- Generate actionable summaries via GPT-4
+- Secure credential handling via environment variables
 
-2. **Analysis Pipeline**
+## Getting Started
 
-   - Processes the ticket description to determine:
-     - Category classification (technical, billing, feature, account, or general)
-     - Sentiment analysis with score (-1 to 1) and label (positive, negative, or neutral)
-     - Generates a comprehensive ticket summary
+### Prerequisites
 
-3. **Components**
-
-   - `ZendeskAnalyzer`: Core function that interfaces with the Zendesk API
-   - GPT-4 powered analysis for accurate categorization and sentiment detection
-   - Secure credential management through environment variables
-
-4. **Execution Flow**
-   ```
-   Ticket ID → Zendesk API → Content Analysis → Insights Generation → Response
-   ```
-
-The agent provides a comprehensive analysis of support tickets, helping teams understand ticket context, urgency, and customer sentiment at a glance.
-
-## Prerequisites
-
-- **Node.js:** v18 or later.
-- **Blaxel CLI:** Ensure you have the Blaxel CLI installed. If not, install it globally:
-  ```bash
-  curl -fsSL https://raw.githubusercontent.com/blaxel-ai/toolkit/main/install.sh | BINDIR=$HOME/.local/bin sh
-  ```
-- **Blaxel login:** Login to Blaxel platform
-  ```bash
-    bl login YOUR-WORKSPACE
-  ```
-
-## Installation
-
-- **Clone the repository and install the dependencies**:
-
-  ```bash
-  git clone https://github.com/blaxel-ai/template-zendesk-ticket-analyzer.git
-  cd template-zendesk-ticket-analyzer
-  npm install
-  ```
-
-- **Environment Variables:** Create a `.env` file with your configuration. You can begin by copying the sample file:
-
-  ```bash
-  cp .env-sample .env
-  ```
-
-  Then, update the following values with your own credentials:
-
-  - Zendesk credentials: `ZENDESK_USERNAME`, `ZENDESK_API_TOKEN`, `ZENDESK_URI`
-
-- **Blaxel apply:** register your integration connection / functions / models on blaxel.ai
+- Node.js v18+
+- Blaxel CLI installed
 
 ```bash
-bl apply -R -f .blaxel
+curl -fsSL https://raw.githubusercontent.com/blaxel-ai/toolkit/main/install.sh | BINDIR=$HOME/.local/bin bash
 ```
 
-## Running the Server Locally
+### Installation
 
-Start the development server with hot reloading using the Blaxel CLI command:
+```bash
+git clone https://github.com/blaxel-templates/template-zendesk-ticket-analyzer.git
+cd template-zendesk-ticket-analyzer
+npm install
+```
+
+### Configuration
+
+Create a `.env` file:
+
+```env
+ZENDESK_USERNAME=your_username
+ZENDESK_API_TOKEN=your_api_token
+ZENDESK_URL=https://yourdomain.zendesk.com
+```
+
+## Usage
+
+### Run Server Locally
 
 ```bash
 bl serve --hotreload
 ```
 
-_Note:_ This command starts the server and enables hot reload so that changes to the source code are automatically reflected.
-
-## Testing the agent
-
-The server will start on port 1338. You can test the agent using the Blaxel CLI:
+### Test Agent
 
 ```bash
-bl run agent my-agent --local --data '{"inputs":"Can you give information about the ticket number 1234567890"}'
-OR
-bl chat my-agent --local
+bl run agent zendeskAnalyzer --local --data '{"inputs":"Can you give information about ticket #123456"}'
 ```
 
-## Deploying to Blaxel
+## API Reference
 
-When you are ready to deploy your application, run:
+### POST /agent
+
+Invoke the agent with input:
+
+**Request**
+
+```http
+POST /agent HTTP/1.1
+Content-Type: application/json
+
+{
+  "agent": "zendeskAnalyzer",
+  "inputs": "Analyze ticket #1234"
+}
+```
+
+**Response**
+
+```json
+{
+  "category": "technical",
+  "sentiment": "positive",
+  "summary": "The ticket reports an issue with API authentication. Steps to reproduce..."
+}
+```
+
+## Development
+
+Project structure:
+
+```
+src/
+├─ index.ts        # main entry point
+├─ agent.ts        # defines chat agent
+└─ tools/          # helper modules
+```
+
+Run linter/tests:
 
 ```bash
-bl deploy
+npm run lint
+npm test
 ```
 
-This command uses your code and the configuration files under the `.blaxel` directory to deploy your application.
+## Contributing
 
-## Project Structure
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
-- **src/**
-  - `index.ts` - The main entry point of the application.
-  - `agent.ts` - Configures the chat agent, streams HTTP
-    responses, and integrates conversational context.
-  - `tools` - Directory to add your tools available to your agent.
-  - `config.ts` - Contains configuration and environment variable setup.
-- **.blaxel/** - Contains configuration files for Blaxel functions and models.
-- **tsconfig.json** - TypeScript compiler configuration.
-- **package.json** - Lists dependencies and defines various project scripts.
+1. Fork the repo.
+2. Create feature branch: `git checkout -b feature/NAME`
+3. Commit changes.
+4. Push to your fork.
+5. Open a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Licensed under MIT. See [LICENSE](LICENSE) for details.
