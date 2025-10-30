@@ -52,6 +52,6 @@ const analyzeTicket = async ({
 export const analyzeTicketTool = tool({
   description:
     "Analyzes a Zendesk ticket to provide categorization, sentiment analysis, and a summary",
-  parameters: z.object({ ticketId: z.number() }),
+  inputSchema: z.object({ ticketId: z.number() }),
   execute: analyzeTicket,
 });
