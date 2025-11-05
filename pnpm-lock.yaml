@@ -12,14 +12,14 @@ importers:
         specifier: ^2.0.58
         version: 2.0.58(zod@4.1.12)
       '@blaxel/core':
-        specifier: 0.2.46
-        version: 0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
+        specifier: 0.2.47
+        version: 0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       '@blaxel/mastra':
-        specifier: 0.2.46
-        version: 0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)
+        specifier: 0.2.47
+        version: 0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)
       '@blaxel/telemetry':
-        specifier: 0.2.46
-        version: 0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)
+        specifier: 0.2.47
+        version: 0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)
       '@fastify/cors':
         specifier: ^11.0.1
         version: 11.0.1
@@ -455,20 +455,20 @@ packages:
     resolution: {integrity: sha512-+EzkxvLNfiUeKMgy/3luqfsCWFRXLb7U6wNQTk60tovuckwB15B191tJWvpp4HjiQWdJkCxO3Wbvc6jlk3Xb2Q==}
     engines: {node: '>=6.9.0'}
 
-  '@blaxel/core@0.2.46':
-    resolution: {integrity: sha512-8YqnIsvVPPsryvd2T55k+vjx27Nfo5u3M3YvJKWE89oNedMKrkzBCUh7+hg4kM1yRtuUZxCC4RNsknk93xQhaw==}
+  '@blaxel/core@0.2.47':
+    resolution: {integrity: sha512-RG8skubFdneXFtEcA7rsEPsL9GipKN1zntmQevjoHm+dxPFbEkUA61j5BqSaCxGlTLeuOrsWTfXR9wrokcoTwg==}
     engines: {node: '>=18'}
 
-  '@blaxel/mastra@0.2.46':
-    resolution: {integrity: sha512-X0704hf9yfQ8CvVzSMTluRHWYVoY3kkHiYYHP7mOJ//k8gB+cAdrJ2W3IXfuBZK1E0iaOxkLdLwPVVLd5Q0aHA==}
+  '@blaxel/mastra@0.2.47':
+    resolution: {integrity: sha512-/Grctn/t3BWwt0/ZGb0iiTjGV22CxGHoODnkKVkqyWuCum04cZQXpPMfWFH5lmD3M5XmTajP4jIRfN1ubs5k/A==}
     engines: {node: '>=18'}
 
-  '@blaxel/telemetry@0.2.46':
-    resolution: {integrity: sha512-Nl7ATR1KS7Gp6vrn/UG6FhAydmMtwrF9aOkWte1DQIgjI0WmbjOR24sGY3078g0BPsyxUCAB0CHLkqsd8tOr8Q==}
+  '@blaxel/telemetry@0.2.47':
+    resolution: {integrity: sha512-k6vN2llwXnpL633OVXWIlvEtcvpabtpinWSD85hfah6kRU6X5pIdCaoPRdgMl2N/ixYdVNLOYB7mcxwQV/S9MA==}
     engines: {node: '>=18'}
 
-  '@blaxel/vercel@0.2.46':
-    resolution: {integrity: sha512-cmg0iVY6fzV71KXDkxFuIO09jHDalU/sDDzJBNyfm2jbiwS87nEfXSRVSsb9yIjtOu2Zhtih9K09ID21zAOMuw==}
+  '@blaxel/vercel@0.2.47':
+    resolution: {integrity: sha512-ovZkCyZecfU42y/inH20pkjhmLbBndIkYovwNMiVKl3y79sX8Y+bWd91NJjUZ2dlzaz4Vo3hAju013cSfCMISQ==}
     engines: {node: '>=18'}
 
   '@clack/core@0.3.5':
@@ -842,12 +842,6 @@ packages:
   '@opentelemetry/context-async-hooks@1.30.1':
     resolution: {integrity: sha512-s5vvxXPVdjqS3kTLKMeBMvop9hbWkwzBpu+mUO2M7sZtlkyDJGwFe33wRKnbaYDo8ExRVBIIdwIGrqpxHuKttA==}
     engines: {node: '>=14'}
-    peerDependencies:
-      '@opentelemetry/api': '>=1.0.0 <1.10.0'
-
-  '@opentelemetry/context-async-hooks@2.0.0':
-    resolution: {integrity: sha512-IEkJGzK1A9v3/EHjXh3s2IiFc6L4jfK+lNgKVgUjeUJQRRhnVFMIO3TAvKwonm9O1HebCuoOt98v8bZW7oVQHA==}
-    engines: {node: ^18.19.0 || >=20.6.0}
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
 
@@ -1792,12 +1786,6 @@ packages:
   '@opentelemetry/sdk-trace-node@1.30.1':
     resolution: {integrity: sha512-cBjYOINt1JxXdpw1e5MlHmFRc5fgj4GW/86vsKFxJCJ8AL4PdVtYH41gWwl4qd4uQjqEL1oJVrXkSy5cnduAnQ==}
     engines: {node: '>=14'}
-    peerDependencies:
-      '@opentelemetry/api': '>=1.0.0 <1.10.0'
-
-  '@opentelemetry/sdk-trace-node@2.0.0':
-    resolution: {integrity: sha512-omdilCZozUjQwY3uZRBwbaRMJ3p09l4t187Lsdf0dGMye9WKD4NGcpgZRvqhI1dwcH6og+YXQEtoO9Wx3ykilg==}
-    engines: {node: ^18.19.0 || >=20.6.0}
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
 
@@ -2913,10 +2901,6 @@ packages:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
 
-  eventsource-parser@3.0.1:
-    resolution: {integrity: sha512-VARTJ9CYeuQYb0pZEPbzi740OWFgpHe7AYJ2WFZVnUDUQp5Dk2yJUgF36YsZ81cOyxT0QxmXD2EQpapAouzWVA==}
-    engines: {node: '>=18.0.0'}
-
   eventsource-parser@3.0.6:
     resolution: {integrity: sha512-Vo1ab+QXPzZ4tCa8SwIHJFaSzy4R6SHf7BY79rFBDf0idraZWAkYrDjDj8uWaSm3S2TK+hJ7/t1CEmZ7jXw+pg==}
     engines: {node: '>=18.0.0'}
@@ -3431,6 +3415,7 @@ packages:
 
   libsql@0.4.7:
     resolution: {integrity: sha512-T9eIRCs6b0J1SHKYIvD8+KCJMcWZ900iZyxdnSCdqxN12Z1ijzT+jY5nrk72Jw4B0HGzms2NgpryArlJqvc3Lw==}
+    cpu: [x64, arm64, wasm32]
     os: [darwin, linux, win32]
 
   light-my-request@6.6.0:
@@ -5181,12 +5166,12 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@blaxel/core@0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))':
+  '@blaxel/core@0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))':
     dependencies:
       '@hey-api/client-fetch': 0.10.0(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       '@modelcontextprotocol/sdk': 1.20.2
       axios: 1.9.0
-      dotenv: 16.5.0
+      dotenv: 16.6.1
       form-data: 4.0.2
       jwt-decode: 4.0.0
       toml: 3.0.0
@@ -5201,9 +5186,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@blaxel/mastra@0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)':
+  '@blaxel/mastra@0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)':
     dependencies:
-      '@blaxel/vercel': 0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)
+      '@blaxel/vercel': 0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
       - bufferutil
@@ -5212,14 +5197,14 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@blaxel/telemetry@0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)':
+  '@blaxel/telemetry@0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)':
     dependencies:
       '@ai-sdk/anthropic': 2.0.39(zod@4.1.12)
       '@ai-sdk/cerebras': 1.0.27(zod@4.1.12)
       '@ai-sdk/google': 2.0.25(zod@4.1.12)
       '@ai-sdk/groq': 2.0.26(zod@4.1.12)
       '@ai-sdk/openai': 2.0.58(zod@4.1.12)
-      '@blaxel/core': 0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
+      '@blaxel/core': 0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/api-logs': 0.200.0
       '@opentelemetry/exporter-logs-otlp-http': 0.200.0(@opentelemetry/api@1.9.0)
@@ -5227,11 +5212,11 @@ snapshots:
       '@opentelemetry/exporter-trace-otlp-http': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation-http': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/resources': 2.2.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-logs': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/sdk-metrics': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/sdk-trace-node': 2.0.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-metrics': 2.2.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-base': 2.2.0(@opentelemetry/api@1.9.0)
+      '@opentelemetry/sdk-trace-node': 2.2.0(@opentelemetry/api@1.9.0)
       ai: 5.0.82(zod@4.1.12)
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
@@ -5241,7 +5226,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@blaxel/vercel@0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)':
+  '@blaxel/vercel@0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))(zod@4.1.12)':
     dependencies:
       '@ai-sdk/anthropic': 2.0.39(zod@4.1.12)
       '@ai-sdk/cerebras': 1.0.27(zod@4.1.12)
@@ -5250,7 +5235,7 @@ snapshots:
       '@ai-sdk/groq': 2.0.26(zod@4.1.12)
       '@ai-sdk/openai': 2.0.58(zod@4.1.12)
       '@ai-sdk/provider': 2.0.0
-      '@blaxel/core': 0.2.46(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
+      '@blaxel/core': 0.2.47(@hey-api/openapi-ts@0.67.0(typescript@5.8.3))
       ai: 5.0.82(zod@4.1.12)
     transitivePeerDependencies:
       - '@hey-api/openapi-ts'
@@ -5679,13 +5664,13 @@ snapshots:
       cors: 2.8.5
       cross-spawn: 7.0.6
       eventsource: 3.0.6
-      eventsource-parser: 3.0.1
+      eventsource-parser: 3.0.6
       express: 5.1.0
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
       zod: 3.24.4
-      zod-to-json-schema: 3.24.5(zod@3.24.4)
+      zod-to-json-schema: 3.24.6(zod@3.24.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -5823,10 +5808,6 @@ snapshots:
       - supports-color
 
   '@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0)':
-    dependencies:
-      '@opentelemetry/api': 1.9.0
-
-  '@opentelemetry/context-async-hooks@2.0.0(@opentelemetry/api@1.9.0)':
     dependencies:
       '@opentelemetry/api': 1.9.0
 
@@ -6376,7 +6357,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/instrumentation': 0.200.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.37.0
       forwarded-parse: 2.1.2
     transitivePeerDependencies:
       - supports-color
@@ -7002,7 +6983,7 @@ snapshots:
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.37.0
 
   '@opentelemetry/resources@2.0.1(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -7127,7 +7108,7 @@ snapshots:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
       '@opentelemetry/resources': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/semantic-conventions': 1.32.0
+      '@opentelemetry/semantic-conventions': 1.37.0
 
   '@opentelemetry/sdk-trace-base@2.0.1(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -7152,13 +7133,6 @@ snapshots:
       '@opentelemetry/propagator-jaeger': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 1.30.1(@opentelemetry/api@1.9.0)
       semver: 7.7.1
-
-  '@opentelemetry/sdk-trace-node@2.0.0(@opentelemetry/api@1.9.0)':
-    dependencies:
-      '@opentelemetry/api': 1.9.0
-      '@opentelemetry/context-async-hooks': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/core': 2.0.0(@opentelemetry/api@1.9.0)
-      '@opentelemetry/sdk-trace-base': 2.0.0(@opentelemetry/api@1.9.0)
 
   '@opentelemetry/sdk-trace-node@2.0.1(@opentelemetry/api@1.9.0)':
     dependencies:
@@ -8035,7 +8009,7 @@ snapshots:
       chokidar: 4.0.3
       confbox: 0.1.8
       defu: 6.1.4
-      dotenv: 16.5.0
+      dotenv: 16.6.1
       giget: 1.2.5
       jiti: 2.4.2
       mlly: 1.7.4
@@ -8342,13 +8316,11 @@ snapshots:
 
   events@3.3.0: {}
 
-  eventsource-parser@3.0.1: {}
-
   eventsource-parser@3.0.6: {}
 
   eventsource@3.0.6:
     dependencies:
-      eventsource-parser: 3.0.1
+      eventsource-parser: 3.0.6
 
   execa@9.5.2:
     dependencies:
@@ -9999,6 +9971,10 @@ snapshots:
       zod: 4.1.12
 
   zod-to-json-schema@3.24.5(zod@3.24.4):
+    dependencies:
+      zod: 3.24.4
+
+  zod-to-json-schema@3.24.6(zod@3.24.4):
     dependencies:
       zod: 3.24.4
 
