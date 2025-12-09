@@ -13,9 +13,9 @@
   "license": "MIT",
   "dependencies": {
     "@ai-sdk/openai": "^2.0.58",
-    "@blaxel/core": "0.2.53",
-    "@blaxel/mastra": "0.2.53",
-    "@blaxel/telemetry": "0.2.53",
+    "@blaxel/core": "0.2.55",
+    "@blaxel/mastra": "0.2.55",
+    "@blaxel/telemetry": "0.2.55",
     "@fastify/cors": "^11.0.1",
     "@mastra/core": "^0.23.3",
     "@opentelemetry/instrumentation-fastify": "^0.45.0",
